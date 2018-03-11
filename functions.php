@@ -5,97 +5,13 @@
     add_action('after_setup_theme', 'wpv_theme_setup');
 
     function wpv_theme_setup(){
-        load_theme_textdomain('programmkino', get_template_directory() . '/languages');
+        load_theme_textdomain('SofanaTheme', get_template_directory() . '/languages');
     }
-
-    // Post Type »Filme«
-
-    function wpv_cpt_filme() {
-
-        $labels = array(
-            'menu_name'             => 'Filme',
-            'name_admin_bar'        => 'Filme',
-            'all_items'             => 'Alle Filme',
-            'add_new'               => 'Neuen Film hinzufügen',
-
-        );
-        $args = array(
-            'label'                 => '',
-            'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'page-attributes', 'custom-fields', ),
-            'hierarchical'          => false,
-            'public'                => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'menu_position'         => 20,
-            'menu_icon'             => 'dashicons-format-video',
-            'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => true,
-            'can_export'            => true,
-            'has_archive'           => true,
-            'exclude_from_search'   => false,
-            'publicly_queryable'    => true,
-            'capability_type'       => 'page',
-        );
-        register_post_type( 'filme', $args );
-
-    }
-    add_action( 'init', 'wpv_cpt_filme', 0 );
-
-
-
-
-
-    // Register Custom Taxonomy
-    function wpv_ct_genre() {
-
-        $labels = array(
-            'menu_name'                  => 'Genre',
-        );
-        $args = array(
-            'labels'                     => $labels,
-            'hierarchical'               => true,
-            'public'                     => true,
-            'show_ui'                    => true,
-            'show_admin_column'          => true,
-            'show_in_nav_menus'          => true,
-            'show_tagcloud'              => true,
-        );
-        register_taxonomy( 'genre', array( 'filme' ), $args );
-
-    }
-    add_action( 'init', 'wpv_ct_genre', 0 );
-
-
-
-
- // Register Custom Taxonomy
-    function wpv_ct_sprachen() {
-
-        $labels = array(
-            'menu_name'                  => 'Sprachen',
-        );
-        $args = array(
-            'labels'                     => $labels,
-            'hierarchical'               => true,
-            'public'                     => true,
-            'show_ui'                    => true,
-            'show_admin_column'          => true,
-            'show_in_nav_menus'          => true,
-            'show_tagcloud'              => true,
-        );
-        register_taxonomy( 'sprachen', array( 'filme' ), $args );
-
-    }
-    add_action( 'init', 'wpv_ct_sprachen', 0 );
-
 
 
     // Custom Header
 
     $defaults = array(
-        'width'                  => 1100,
-        'height'                 => 200,
         'flex-height'            => true,
         'flex-width'             => true,
     );
@@ -106,7 +22,7 @@
     // Custom Backgrounds
 
     $defaults = array(
-        'default-color'  => '#122F00',
+        'default-color'  => '#ffffed',
     );
 
     add_theme_support( 'custom-background' , $defaults );
@@ -213,40 +129,6 @@
     }
 
 
-    // Add Shortcode
-    function wpv_shortcode1( $atts ) {
-
-        // Attributes
-        extract( shortcode_atts(
-            array(
-                'htmltag' => 'h3',
-            ), $atts )
-        );
-
-
-        return '<' . $htmltag . '>In diesem Film kostet Popcorn nur 2 Euro!</' . $htmltag . '>';
-    }
-    add_shortcode( 'popcorn', 'wpv_shortcode1' );
-
-
-
-
-
-
-
-
-    // Add Shortcode
-    function wpv_shortcode2( $atts, $content = null ) {
-
-        return '<div class="infobox"><h3>Info:</h3>'.$content.'</div>';
-    }
-
-    add_shortcode( 'infobox', 'wpv_shortcode2' );
-
-
-
-
-
 
     // Customizer
     require_once(get_template_directory() . '/customizer.php');
@@ -287,17 +169,11 @@
 
 
 
-
-
-
     function wpv_add_editor_styles() {
         add_editor_style( 'style-editor.css' );
     }
 
     add_action( 'admin_init', 'wpv_add_editor_styles' );
-
-
-
 
 
 
@@ -324,17 +200,18 @@
     function wpv_dashboard_widget_content() {
 
         // Display whatever it is you want to show.
-        echo '<p>Es können folgende Shortcodes verwendet werden:</p><ul><li>[infobox]</li><li>[popcorn htmltag=""]</li></ul>';
+        echo '<p>To Do: Ein To Do Dashboard Widget erstellen</p>';
     }
 
 
+    //Login Style ändern
 
     function wpv_login_styles() { ?>
 
         <style>
 
             body.login {
-                background-color: #122F00;
+                background-color: #ffffed;
                 background-image: radial-gradient(circle, white, transparent);
                 background-size: cover;
                 background-attachment: fixed;
