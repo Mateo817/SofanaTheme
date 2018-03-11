@@ -1,0 +1,135 @@
+@import "https://fonts.googleapis.com/css?family=Cormorant+Garamond|Slabo+27px|Courgette"
+
+$hchange: 0.3rem
+$h1: 3rem
+$h2: 3rem
+$h3: 2.2rem
+$h4: 1.6rem
+
+
+*
+	box-sizing: border-box
+
+body
+	background-color: #ffffed
+
+.site-main
+	padding-top: 25px
+	min-height: 80vh
+
+.site-content
+	max-width: 1150px
+	display: block
+	margin: auto
+	padding: 1rem
+	overflow: hidden
+	margin-top: 0
+	padding-top: 0
+
+p
+	font-family: 'Slabo 27px', serif
+	text-align: justify
+	font-size: 1.3rem
+	font-weight: 500
+	padding: 0 0 0.5rem 0
+	margin: 0
+	color: rgb(95, 95, 95)
+
+ul
+	font-family: 'Slabo 27px', serif
+	text-align: left
+	font-size: 1.3rem
+	font-weight: 500
+	padding: 0 0 0.2rem 0
+	margin: 0
+	color: rgb(95, 95, 95)
+	list-style-type: none
+
+li
+	font-family: 'Slabo 27px', serif
+	text-align: left
+	font-size: 1.3rem
+	font-weight: 500
+	padding: 0 0 0.2rem 0
+	margin: 0
+	color: rgb(95, 95, 95)
+	list-style: none
+
+h1
+	font-family: 'Cormorant Garamond', serif
+	font-weight: 600
+	font-size: $h1
+	width: 100%
+	text-align: center
+	color: rgb(95, 95, 95)
+
+h2
+	font-family: 'Cormorant Garamond', serif
+	font-weight: 600
+	font-size: $h2
+	width: 100%
+	text-align: center
+	color: rgb(95, 95, 95)
+
+
+h3
+	font-family: 'Slabo 27px', serif
+	font-weight: 600
+	width: 100%
+	text-align: center
+	color: rgb(95, 95, 95)
+	font-size: $h3
+
+h4
+	font-family: 'Slabo 27px', serif
+	font-weight: 600
+	width: 100%
+	text-align: center
+	color: rgb(95, 95, 95)
+	font-size: $h4
+
+img
+	max-height: 100%
+	width: auto
+	padding: 0
+	margin: auto
+
+@media screen and ( max-width: 1050px)
+	h1
+		font-size: $h1 - $hchange
+	h2
+		font-size: $h2 - $hchange
+	h3
+		font-size: $h3 - $hchange
+	h4
+		font-size: $h4 - $hchange
+
+@media screen and ( max-width: 800px)
+	h1
+		font-size: $h1 - 2* $hchange
+	h2
+		font-size: $h2 - 2* $hchange
+	h3
+		font-size: $h3 - 2* $hchange
+	h4
+		font-size: $h4 - 2* $hchange
+
+@media screen and ( max-width: 600px)
+	h1
+		font-size: $h1 - 3* $hchange
+	h2
+		font-size: $h2 - 3* $hchange
+	h3
+		font-size: $h3 - 3* $hchange
+	h4
+		font-size: $h4 - 3* $hchange
+
+	@media screen and ( max-width: 350px)
+		h1
+			font-size: $h1 - 3.5* $hchange
+		h2
+			font-size: $h2 - 3.5* $hchange
+		h3
+			font-size: $h3 - 3.5* $hchange
+		h4
+			font-size: $h4 - 3.5* $hchange

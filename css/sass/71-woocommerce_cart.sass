@@ -1,0 +1,72 @@
+@media screen and (max-width:600px)
+  .woocommerce
+    div.cart_totals
+      width: 100% !important
+
+  .woocommerce-cart-form
+    table.shop_table
+      thead
+        background-color: rgba(153, 204, 51, 0.11)
+        tr
+          th.product-price
+            visibility: hidden
+            width: 1px
+            padding: 0 !important
+          th.product-remove
+            padding: 0 !important
+          th.product-thumbnail
+            min-width: 1px !important
+            padding: 0 !important
+
+      tr
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        &:nth-of-type(even)
+          background-color: rgba(153, 204, 51, 0.08)
+
+        .product-thumbnail
+          width: auto
+
+      td
+        text-align: center
+        border-top: none !important
+
+      td.product-name
+        order: 1
+        width: 70%
+
+      td.product-price
+        order: 2
+        width: 30%
+
+      td.product-remove
+        order: 3
+        width: 15px
+
+      td.product-thumbnail
+        order: 4
+
+
+      td.product-quantity
+        order: 5
+        width: 20px
+
+      td.product-subtotal
+        order: 6
+        font-weight: bold
+
+      td.actions
+        text-align: center !important
+        margin: auto
+
+        div.coupon
+          float: none !important
+          padding-bottom: 0.5rem
+
+          .input-text
+            float: none !important
+            margin-bottom: 0.2rem !important
+
+      button.update_cart
+        margin: auto

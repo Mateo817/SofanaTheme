@@ -1,0 +1,374 @@
+$f-hchange: 0.95
+$k-h2: 2.6rem
+$p-big: 1.4rem
+$p-small: 1.3rem
+$a-big: 2rem
+
+body.home
+	padding-top: 100vh
+	.site-header
+		h1
+			padding: 1rem
+			margin: auto
+			top: 40vh
+			color: white
+			position: absolute
+
+section
+	h2
+		margin: 0.5rem 0 0.4rem 0
+
+	h3
+		margin: 0.5rem 0 0.4rem 0
+
+
+div
+	section
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 2rem
+
+
+div#verkauf
+	div.product
+		width: 48%
+		order: 2
+		margin: 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	div.slider
+		width: 50%
+		order: 1
+		margin: 0
+		max-height: 95vh
+
+	div.product-slider
+		margin-bottom: 5px
+		div
+			max-height: 80vh
+			img
+				max-height: 80vh
+
+
+
+	div.product-nav
+		div
+			max-height: 15vh
+			img
+				max-height: 15vh
+
+
+
+	.product
+		h3
+			text-decoration: underline
+			margin-top: 0.2rem
+
+		h2
+			margin-top: 0
+
+		div
+			p
+				text-align: center
+				.regpreis
+					font-size: 1.3rem
+					font-weight: 600
+
+				.vergleichspreis
+					font-size: 0.6rem
+
+		.kurzbesch
+			font-size: 1.1rem
+			font-weight: 600
+			margin-bottom: .2rem
+
+		.inci
+			width: 100%
+			font-size: 1rem
+			padding: 0
+
+		.versandkosten
+			font-size: 0.8rem
+			text-align: center
+
+		.cart
+			margin-top: 1rem
+			align-items: center
+
+
+	.buybox
+		width: 190px
+		height: 215px
+		text-align: center
+		margin: auto
+		margin-top: 1rem
+		margin-bottom: 5px
+		background-color: rgba(200, 255, 200, 0.08)
+		border: solid 2px
+		border-color: rgba(200, 255, 200, 0.2)
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1)
+		&:hover
+			width: 195px
+			height: 221px
+			margin-bottom: 0
+			background-color: rgba(200, 255, 200, 0.2)
+			box-shadow: 0 11px 11px 0 rgba(0, 0, 0, 0.2)
+
+		input
+			width: 50%
+
+
+div#info
+	section
+		width: 100%
+		align-items: center
+
+	img
+		width: 35%
+		height: 100%
+		margin: 1rem
+
+	section.right
+		img
+			order: 3
+
+		span
+			order: 2
+
+
+	section.left
+		img
+			order: 2
+
+		span
+			order: 3
+
+
+	span
+		width: 60%
+		margin-bottom: 0.5rem
+		align-items: center
+
+
+div#kurzinfo
+	section
+		width: 100%
+		align-items: stretch
+		h2
+			margin-top: 130px
+			font-size: $k-h2
+			text-transform: uppercase
+
+
+		p
+			font-weight: 600
+			text-align: center
+
+		div
+			width: 333px
+			position: relative
+			margin: 10px
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 110px
+				top: 10px
+				margin: auto
+				background-image: url("/wp-content/themes/Sofana/img/leaf.png")
+				background-size: contain
+				background-position: center
+				background-repeat: no-repeat
+
+
+div#aktion
+	section
+		width: 100%
+		align-items: center
+		h2
+			text-transform: uppercase
+			margin-bottom: .2rem
+
+		p
+			width: 100%
+			font-family: 'Slabo 27px', serif
+			font-weight: 600
+			text-align: center
+
+		p.big
+			font-size: 1.8rem
+			line-height: $p-big
+			padding-top: .8rem
+
+		p.small
+			font-size: $p-small
+			padding-bottom: 0.8rem
+
+		a.big
+			text-transform: uppercase
+			font-size: $a-big
+			line-height: 1.4
+			padding-top: 1rem
+			color: rgb(95, 95, 95)
+			&:hover
+				font-size: $a-big * 1.2
+				color: rgb(30, 30, 30)
+
+
+button#gratis
+	width: 100%
+	min-height: 4.5rem
+	padding: 0.5rem
+	background-color: rgba(153, 204, 51, 0.55)
+	&:hover
+		background-color: rgba(153, 204, 51, 0.55)
+
+
+body
+	&:not(.home)
+		.site-header
+			h1
+				visibility: hidden
+				font-size: 1px
+
+@media screen and ( max-width: 1050px) and ( min-width: 700px)
+	div#verkauf
+		div.product
+			width: 80%
+			margin: auto
+
+		div.slider
+			width: 70%
+			margin: auto
+
+@media screen and ( max-width: 700px)
+	div#verkauf
+		div.product
+			width: 100%
+
+		div.slider
+			width: 100%
+
+@media screen and ( max-height: 450px)
+	div#verkauf
+		div.product-nav
+			div
+				visibility: hidden
+				height: 1px
+
+@media screen and ( max-height: 475px) and ( max-width: 1050px)
+	div#verkauf
+		div.product-slider
+			div
+				width: auto
+				height: auto
+
+		.slick-prev
+			&:before
+				color: black
+
+		.slick-next
+			&:before
+				color: black
+
+@media screen and ( max-width: 850px)
+	div#info
+		span
+			width: 80%
+			margin: auto
+
+		img
+			width: auto
+			margin: auto
+			height: auto
+			padding-bottom: .8rem
+
+		section.right
+			img
+				order: 1
+				max-width: 95%
+
+
+		section.left
+			img
+				order: 1
+				max-width: 95%
+
+
+
+
+@media screen and ( max-width: 730px)
+	div#info
+		span
+			width: 95%
+
+
+
+@media screen and ( max-width: 1150px)
+	div#kurzinfo
+		section
+			justify-content: space-around
+
+@media screen and ( max-width: 1050px)
+	div#kurzinfo
+		section
+			h2
+				font-size: $k-h2 * $f-hchange
+	div#aktion
+		section
+			a.big
+				font-size: $a-big * $f-hchange
+				&:hover
+					font-size: $a-big * 1.2 * $f-hchange
+	div#aktion
+		section
+			p.big
+				font-size: $p-big * $f-hchange
+	div#aktion
+		section
+			p.small
+				font-size: $p-small - 0.1rem
+
+@media screen and ( max-width: 800px)
+	div#kurzinfo
+		section
+			h2
+				font-size: $k-h2 * $f-hchange * $f-hchange
+	div#aktion
+		section
+			a.big
+				font-size: $a-big * $f-hchange * $f-hchange
+				&:hover
+					font-size: $a-big * 1.2 * $f-hchange * $f-hchange
+	div#aktion
+		section
+			p.big
+				font-size: $p-big * $f-hchange * $f-hchange
+	div#aktion
+		section
+			p.small
+				font-size: $p-small - 0.2rem
+
+@media screen and ( max-width: 600px)
+	div#kurzinfo
+		section
+			h2
+				font-size: $k-h2 * $f-hchange * $f-hchange * $f-hchange
+	div#aktion
+		section
+			a.big
+				font-size: $a-big * $f-hchange * $f-hchange * $f-hchange
+				&:hover
+					font-size: $a-big * 1.2 * $f-hchange * $f-hchange * $f-hchange
+	div#aktion
+		section
+			p.big
+				font-size: $p-big * $f-hchange * $f-hchange * $f-hchange
+	div#aktion
+		section
+			p.small
+				font-size: $p-small - 0.3rem

@@ -1,0 +1,44 @@
+form.woocommerce-checkout
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  .kundendaten
+    padding: 1rem
+    width: 50%
+    @media screen and (max-width:800px)
+      padding: 0.5rem
+      width: auto
+    .col2-set
+      width: 100%
+      .col-1
+        width: 100%
+        @media screen and (max-width:450px)
+          #billing_first_name_field
+            width: 100%
+          #billing_last_name_field
+            width: 100%
+      .col-2
+        width: 100%
+      abbr.required
+        text-decoration: none
+      h3#ship-to-different-address
+        font-size: 1.2rem
+
+.bestelldaten
+  padding: 1rem
+  width: 50%
+  @media screen and (max-width:800px)
+    padding: 0.5rem
+    width: auto
+
+  table.shop_table
+    background-color: #ffffff00
+    thead
+      background-color: rgba(153, 204, 51, 0.11)
+    tr
+      &:nth-of-type(even)
+        background-color: rgba(153, 204, 51, 0.08)
+
+  .wc_payment_method
+    div
+      background-color: rgba(153, 204, 51, 0.1)
